@@ -62,6 +62,47 @@
                                 
                         </div>
                     </div>
+
+                    <div class="add-section p-4 mt-5">
+                        <h2 class="text-uppercase fw-bold">Aggiungi un nuovo album:</h2>
+                        <div class="row rl-row">
+
+                            <div class="col-12 mt-4">
+                                <div class="input-group">
+                                    <label for="title" class="form-label col-12">Titolo Album</label>
+                                    <input v-model="title" type="text" class="form-control" id="title" placeholder="Inserisci il titolo dell'album...">
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <div class="input-group">
+                                    <label for="exampleFormControlInput1" class="form-label col-12">Artista</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Inserisci l'artista...">
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <div class="input-group">
+                                    <label for="exampleFormControlInput1" class="form-label col-12">Anno</label>
+                                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Inserisci l'anno...">
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <div class="input-group">
+                                    <label for="exampleFormControlInput1" class="form-label col-12">URL immagine</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Inserisci l'url dell'immagine...">
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <div class="input-group">
+                                    <label for="exampleFormControlInput1" class="form-label col-12">Genere</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Inserisci il genere...">
+                                </div>
+                            </div>
+                    
+                            <div class="col-1 mt-4">
+                                <button @click="addAlbum()" class="btn btn-outline-warning" type="button" id="button-add">Inserisci</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </main>
