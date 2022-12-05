@@ -70,7 +70,7 @@
                             <div class="col-12 mt-4">
                                 <div class="input-group">
                                     <label for="title" class="form-label col-12">Titolo Album</label>
-                                    <input v-model="title" type="text" class="form-control" id="title" placeholder="Inserisci il titolo dell'album...">
+                                    <input v-model.trim="title" type="text" class="form-control" id="title" placeholder="Inserisci il titolo dell'album...">
                                 </div>
                             </div>
                             <div class="col-12 mt-4">

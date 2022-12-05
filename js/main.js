@@ -6,8 +6,7 @@ createApp({
         return{
             apiUrl:'server.php',
             albums:[],
-            title:'',
-            prova:[]
+            title:''
         }
     },
     methods:{
@@ -28,8 +27,8 @@ createApp({
                     headers: {'Content-Type': 'multipart/form-data'}
                 })
             .then(result => {
-                this.prova = result.data;
-                console.log('questo',this.prova); 
+                this.albums = result.data;
+                console.log('questo',this.albums); 
             })
         }
     },

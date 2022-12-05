@@ -3,11 +3,10 @@
 $string = file_get_contents('dischi.json');
 $albums_collection = json_decode($string, true);
 
-if(isset($POST_['albumTitle'])){
+if(isset($_POST['albumTitle'])){
 
     $newAlbum = [
-        'title' => $POST_['albumTitle'],
-        'ciao' => 'cacac'
+        'title' => $_POST['albumTitle'],
     ];
 
     $albums_collection[] = $newAlbum;
