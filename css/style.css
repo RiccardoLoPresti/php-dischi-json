@@ -1,0 +1,52 @@
+.wrapper{
+    min-height: 100vh;
+    background-color: #1d2d3c;
+    color: white;
+}
+
+header{
+    height: 75px;
+    background-color: #06131f;
+}
+
+img{
+    max-width: 100%;
+}
+
+.logo i{
+    font-size: 2.7rem;
+    color: #18d860 ;
+}
+
+.card-wrapper{
+    gap: 60px;
+}
+
+.rl-card{
+    width: 280px;
+    background-color: #112030;
+    border-radius: 10px;
+    padding:20px 20px;
+}
+
+.box-img{
+    height: 180px;
+}
+
+.box-img img{
+    object-fit: contain;
+    height: 180px;
+}
+
+.text{
+    padding-top: 20px;
+}
+
+.text h3{
+    font-size: 1.2rem;
+    font-weight: bolder ;
+}
+
+.text h3:last-child{
+    font-size: 1rem;
+}

@@ -48,14 +48,14 @@
 
                             <div class="card-wrapper d-flex flex-wrap justify-content-center">
 
-                                <div class="rl-card text-center">
+                                <div v-for="album,index in albums" :key="index" class="rl-card text-center">
                                     <div class="box-img">
-                                        <img src="https://www.runningin.info/wp-content/uploads/2018/07/no-image.jpg" alt="ddd">
+                                        <img :src="album.poster" alt="poster">
                                     </div>
                                     <div class="text">
-                                        <h3>Title</h3>
-                                        <p>artista</p>
-                                        <h5>anno</h5>
+                                        <h3>{{album.title}}</h3>
+                                        <p>{{album.author}}</p>
+                                        <h3>{{album.year}}</h3>
                                     </div>
                                 </div>
                                 
