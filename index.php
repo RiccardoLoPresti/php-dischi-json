@@ -73,10 +73,11 @@
                                         <p class="text-capitalize">{{singleAlbum.genre}}</p>
                                         <h3 class="text-capitalize">{{singleAlbum.year}}</h3>
                                     </div>
-
+                                    
                                 </div>
-                                
-                                
+
+                            </div>
+
                         </div>
                     </div>
 
