@@ -5,30 +5,45 @@ createApp({
     data(){
         return{
             apiUrl:'server.php',
+            isClicked:false,
             albums:[],
-            title:''
+            singleAlbum:[],
+            title:'',
+            author:'',
+            year:'',
+            poster:'',
+            genre:''
         }
     },
     methods:{
         getAlbums(){
             axios.get(this.apiUrl)
             .then(result => {
-                console.log(result.data); 
-
                 this.albums = result.data;
             })
         },
         addAlbum(){
-            const data = {
-                albumTitle: this.title
-            }
-            axios.post(this.apiUrl, data, 
-                {
-                    headers: {'Content-Type': 'multipart/form-data'}
-                })
+            const data = new FormData();
+            data.append('albumTitle',this.title);
+            data.append('albumAuthor',this.author);
+            data.append('albumYear',this.year);
+            data.append('albumPoster',this.poster);
+            data.append('albumGenre',this.genre);
+            axios.post(this.apiUrl, data)
             .then(result => {
+                this.title = '';
+                this.author = '';
+                this.year = '';
+                this.poster = '';
+                this.genre = '';
                 this.albums = result.data;
-                console.log('questo',this.albums); 
+            })
+        },
+        moreInfo(index){
+            axios.get(this.apiUrl)
+            .then(result => {
+                this.singleAlbum = result.data[index];
+                console.log(this.singleAlbum);
             })
         }
     },

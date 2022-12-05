@@ -20,6 +20,7 @@ img{
 
 .card-wrapper{
     gap: 60px;
+    position: relative;
 }
 
 .rl-card{
@@ -27,6 +28,7 @@ img{
     background-color: #112030;
     border-radius: 10px;
     padding:20px 20px;
+    cursor: pointer;
 }
 
 .box-img{
@@ -49,6 +51,20 @@ img{
 
 .text h3:last-child{
     font-size: 1rem;
+}
+
+.info{
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    background-color: #112030a0;
+    border-radius: 25px;
+    padding: 50px;
+}
+
+.info-img{
+    width: 350px;
+    height: 350px;
 }
 
 .add-section{
