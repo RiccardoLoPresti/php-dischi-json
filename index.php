@@ -20,7 +20,7 @@
     <title>PHP Dischi JSON</title>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper pb-5">
         <div id="app">
 
             <header>
@@ -51,6 +51,7 @@
                                 <div v-for="album,index in albums" :key="index"
                                  @click="moreInfo(index), isClicked = !isClicked"
                                  class="rl-card text-center">
+
                                     <div class="box-img">
                                         <img :src="album.poster" alt="poster">
                                     </div>
@@ -59,21 +60,7 @@
                                         <p class="text-capitalize">{{album.author}}</p>
                                         <h3 class="text-capitalize">{{album.year}}</h3>
                                     </div>
-                                </div>
 
-                                <div v-show="isClicked" class="info">
-                                    
-                                    <div class="info-img">
-                                        <img :src="singleAlbum.poster" alt="poster">
-                                    </div>
-
-                                    <div class="info-text">
-                                        <h3 class="text-capitalize">{{singleAlbum.title}}</h3>
-                                        <p class="text-capitalize">{{singleAlbum.author}}</p>
-                                        <p class="text-capitalize">{{singleAlbum.genre}}</p>
-                                        <h3 class="text-capitalize">{{singleAlbum.year}}</h3>
-                                    </div>
-                                    
                                 </div>
 
                             </div>
@@ -121,6 +108,25 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div v-show="isClicked" class="info">
+                                    
+                    <div class="info-img">
+                        <img :src="singleAlbum.poster" alt="poster">
+                    </div>
+
+                    <div class="info-text text-center py-4">
+                        <h3 class="text-capitalize fw-bold">{{singleAlbum.title}}</h3>
+                        <h4 class="text-capitalize">{{singleAlbum.author}}</h4>
+                        <h5 class="text-capitalize">{{singleAlbum.genre}}</h5>
+                        <h4 class="text-capitalize">{{singleAlbum.year}}</h4>
+                    </div>
+
+                    <div class="close">
+                        <i @click="isClicked = false" class="fa-solid fa-square-xmark"></i>
+                    </div>
+
                 </div>
 
             </main>

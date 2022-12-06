@@ -1,7 +1,12 @@
 .wrapper{
     min-height: 100vh;
+    height: 100%;
     background-color: #1d2d3c;
     color: white;
+}
+
+main{
+    position: relative;
 }
 
 header{
@@ -55,11 +60,31 @@ img{
 
 .info{
     position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
     width: 100%;
     height: 100vh;
-    background-color: #112030a0;
+    background-color: #112030cc;
     border-radius: 25px;
     padding: 50px;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.close i{
+    font-size: 2.5rem;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.close i:hover{
+    color: rgb(199, 207, 214);
 }
 
 .info-img{
