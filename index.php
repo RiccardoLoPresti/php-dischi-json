@@ -63,53 +63,71 @@
 
                                 </div>
 
+                                <div class="rl-card text-center ">
+
+                                    <div class="add-album" @click="addAlbumToggle">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </div>
+
+                                    <div class="text">
+                                        <h3>Add Album</h3>
+                                    </div>
+                                    
+                                    <div class="add-section p-4 my-5 p-relative"  v-show="addNewShow">
+
+                                        <div class="row rl-row mt-5 ">
+
+                                            <i @click="addNewShow = false" class="fa-solid fa-square-xmark"></i>
+
+
+                                            <h3>Add New Album</h3>
+                                            <div class="mt-4">
+                                                <div class="input-group">
+                                                    <label for="title" class="form-label col-12">Titolo Album</label>
+                                                    <input v-model.trim="title" type="text" class="form-control" id="title" placeholder="Inserisci il titolo dell'album...">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mt-4">
+                                                <div class="input-group">
+                                                    <label for="exampleFormControlInput1" class="form-label col-12">Artista</label>
+                                                    <input v-model.trim="author" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Inserisci l'artista...">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mt-4">
+                                                <div class="input-group">
+                                                    <label for="exampleFormControlInput1" class="form-label col-12">Anno</label>
+                                                    <input v-model.trim="year" type="number" class="form-control" id="exampleFormControlInput1" placeholder="Inserisci l'anno...">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mt-4">
+                                                <div class="input-group">
+                                                    <label for="exampleFormControlInput1" class="form-label col-12">URL immagine</label>
+                                                    <input v-model.trim="poster" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Inserisci l'url dell'immagine...">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mt-4">
+                                                <div class="input-group">
+                                                    <label for="exampleFormControlInput1" class="form-label col-12">Genere</label>
+                                                    <input v-model.trim="genre" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Inserisci il genere...">
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="col-1 mt-4">
+                                                <button @click="addAlbum" @keyup.enter="addAlbum" class="btn btn-outline-warning" type="button" id="button-add">Inserisci</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                </div>
+
+
                             </div>
 
                         </div>
                     </div>
 
-                    <div class="add-section p-4 my-5">
-                        <h2 class="text-uppercase fw-bold">Aggiungi un nuovo album:</h2>
-                        <div class="row rl-row">
-
-                            <div class="col-12 mt-4">
-                                <div class="input-group">
-                                    <label for="title" class="form-label col-12">Titolo Album</label>
-                                    <input v-model.trim="title" type="text" class="form-control" id="title" placeholder="Inserisci il titolo dell'album...">
-                                </div>
-                            </div>
-                            <div class="col-12 mt-4">
-                                <div class="input-group">
-                                    <label for="exampleFormControlInput1" class="form-label col-12">Artista</label>
-                                    <input v-model.trim="author" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Inserisci l'artista...">
-                                </div>
-                            </div>
-                            <div class="col-12 mt-4">
-                                <div class="input-group">
-                                    <label for="exampleFormControlInput1" class="form-label col-12">Anno</label>
-                                    <input v-model.trim="year" type="number" class="form-control" id="exampleFormControlInput1" placeholder="Inserisci l'anno...">
-                                </div>
-                            </div>
-                            <div class="col-12 mt-4">
-                                <div class="input-group">
-                                    <label for="exampleFormControlInput1" class="form-label col-12">URL immagine</label>
-                                    <input v-model.trim="poster" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Inserisci l'url dell'immagine...">
-                                </div>
-                            </div>
-                            <div class="col-12 mt-4">
-                                <div class="input-group">
-                                    <label for="exampleFormControlInput1" class="form-label col-12">Genere</label>
-                                    <input v-model.trim="genre" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Inserisci il genere...">
-                                </div>
-                            </div>
                     
-                            <div class="col-1 mt-4">
-                                <button @click="addAlbum" @keyup.enter="addAlbum" class="btn btn-outline-warning" type="button" id="button-add">Inserisci</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div v-show="isClicked" class="info">
                                     
                     <div class="info-img">
@@ -125,6 +143,10 @@
 
                     <div class="close">
                         <i @click="isClicked = false" class="fa-solid fa-square-xmark"></i>
+                    </div>
+
+                    <div class="delete">
+                        <button @click="" class="btn rl-btn">Delete</button>
                     </div>
 
                 </div>

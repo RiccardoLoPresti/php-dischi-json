@@ -6,6 +6,7 @@ createApp({
         return{
             apiUrl:'server.php',
             isClicked:false,
+            addNewShow:true,
             albums:[],
             singleAlbum:[],
             title:'',
@@ -45,6 +46,9 @@ createApp({
                 this.singleAlbum = result.data[index];
                 console.log(this.singleAlbum);
             })
+        },
+        addAlbumToggle(){
+            this.addNewShow = !this.addNewShow;
         }
     },
     mounted(){

@@ -25,10 +25,10 @@ img{
 
 .card-wrapper{
     gap: 60px;
-    position: relative;
 }
 
 .rl-card{
+    position: relative;
     width: 280px;
     background-color: #112030;
     border-radius: 10px;
@@ -37,12 +37,13 @@ img{
 }
 
 .box-img{
-    height: 180px;
+    height: 230px;
 }
 
 .box-img img{
-    object-fit: contain;
-    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    height:230px;
 }
 
 .text{
@@ -63,9 +64,11 @@ img{
     display: flex;
     align-items: center;
     flex-direction: column;
-    top: 0;
-    width: 100%;
-    height: 100vh;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 100%;
     background-color: #112030cc;
     border-radius: 25px;
     padding: 50px;
@@ -87,17 +90,50 @@ img{
     color: rgb(199, 207, 214);
 }
 
+.btn.rl-btn{
+    background-color: rgb(214, 40, 40);
+    color: white;
+}
+
 .info-img{
     width: 350px;
     height: 350px;
+    margin-top: 200px;
+}
+
+.add-section i{
+    position: absolute;
+    right: -440px;
+    top: 0;
+    font-size: 1.5rem;
 }
 
 .add-section{
-    background-color: #112030;
+    background-color: #112030ec;
+    width: 900px;
     border-radius: 20px;
-    height: 100%;
+    position: absolute;
+    top: -365px;
+    left: -100%;
+    display: flex;
+    justify-content: center;
+}
+
+.add-album{
+    background-color: white;
+    height: 230px;
+    width: 230px;
+    border-radius: 50%;
+}
+
+.add-album i{
+    color: #18d860;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 220px;
+
 }
 
 .row.rl-row{
-    width: 25%;
+    width: 50%;
 }
